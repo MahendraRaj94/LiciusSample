@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            tools:context=".ui.grid.MeatGridListFragment">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:background="@color/colorPrimary"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:gravity="center"
+                    android:id="@+id/toolbar_title" />
+
+            </androidx.appcompat.widget.Toolbar>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:id="@+id/btnOne"
+                    android:padding="@dimen/dimen_8_dp"
+                    android:layout_margin="@dimen/dimen_8_dp"
+                    android:textColor="@color/colorPrimary"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:background="@drawable/all_slots_background"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:id="@+id/btnTwo"
+                    android:layout_margin="@dimen/dimen_8_dp"
+                    android:background="@drawable/time_slot_background"
+                    android:padding="@dimen/dimen_8_dp"
+                    android:textColor="@color/white"
+                    android:textAlignment="center"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="@dimen/dimen_8_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvMessage"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvBadge"
+                    android:layout_width="wrap_content"
+                    android:textColor="@color/light_grey"
+                    android:gravity="end|center_horizontal"
+                    android:textSize="10sp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"/>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvMeat"
+                tools:listitem="@layout/list_item_meat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/flProgress"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ProgressBar
+                android:id="@+id/progress_circular"
+                android:progressTint="@color/colorAccent"
+                android:indeterminateBehavior="repeat"
+                android:indeterminateTint="@color/colorAccent"
+                android:indeterminate="true"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

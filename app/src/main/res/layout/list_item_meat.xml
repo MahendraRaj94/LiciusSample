@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_margin="@dimen/dimen_4_dp"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_margin="@dimen/dimen_4_dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMeat"
+                android:scaleType="fitXY"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_120_dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintTop_toBottomOf="@+id/ivMeat"
+                android:text="@string/chicken_tenders_boneless"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/dimen_12_sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                android:id="@+id/tvNettWeight"
+                android:text="@string/net_wt_500gm"
+                android:maxLines="1"
+                android:textSize="@dimen/dimen_10_sp"
+                android:textColor="@color/light_grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNettWeight"
+                android:id="@+id/tvDiscPrice"
+                android:text="₹ 360"
+                android:maxLines="1"
+                android:textSize="@dimen/dimen_10_sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:text="Add to Cart"
+                android:padding="@dimen/dimen_8_dp"
+                android:textSize="@dimen/dimen_10_sp"
+                android:textColor="@color/white"
+                android:background="@drawable/button_background"
+                android:layout_height="wrap_content" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRecommended"
+            android:text="@string/recommended"
+            android:background="@color/yellow"
+            android:padding="@dimen/dimen_4_dp"
+            android:textSize="@dimen/dimen_8_sp"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvOffer"
+            android:text="40% Off"
+            android:elevation="@dimen/dimen_4_dp"
+            android:layout_gravity="end|top"
+            android:layout_marginTop="@dimen/dimen_8_dp"
+            android:background="@drawable/offer_background"
+            android:padding="@dimen/dimen_4_dp"
+            android:textSize="@dimen/dimen_10_sp"
+            android:textColor="@color/colorAccent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+</layout>
